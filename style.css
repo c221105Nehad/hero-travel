@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* header */
+
+header {
+    height: 100vh;
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+/* navigation */
+
+nav {
+    padding-top: 1%;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 1%;
+    width: 100%;
+    border-radius: 1.5vw;
+    color: white;
+}
+
+.logo {
+    width: 50%;
+}
+
+.logo h1 {
+    font-size: 200%;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    gap: 5%;
+    width: 50%;
+}
+
+.navbar ul > li {
+    list-style: none;
+    padding: 0.5% 0%;
+    position: relative;
+}
+
+.navbar ul > li::before {
+    content: '';
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 15%;
+    width: 0%;
+    border-radius: 2vw;
+    transition: all 0.7s ease-in-out;
+}
+
+.navbar ul > li:hover::before {
+    width: 100%
+}
+
+.navbar ul > li a {
+    text-decoration: none;
+    color: white;
+    margin-right: 10%;
+    font-size: 120%;
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+/* hero section */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7%;
+    height: 70%;
+    margin-top: 5%;
+    border-radius: 1.5vw;
+    position: relative;
+    background: linear-gradient(to bottom, black, black, transparent),
+    linear-gradient(to top, black, black, transparent);
+    z-index: 1;
+}
+
+.hero::before {
+    content: '';
+    background: url('images/travel.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1.5vw;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hero-title {
+    padding: 0.5%;
+    border-radius: 1.5vw;
+    position: relative;
+}
+
+.hero-title:before {
+    content: '';
+    width: 90%;
+    height: 2%;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    background-color: white;
+}
+
+.hero-title h1 {
+    font-size: 400%;
+    color: white;
+}
+
+.hero-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-description div {
+    padding: 1% 0%;
+    position: relative;
+}
+
+.hero-description div:before {
+    content: '';
+    width: 100%;
+    height: 2%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+}
+
+.hero-description p {
+    font-size: 120%;
+    color: white;
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+/* Popular section */
+
+.popular {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    gap: 3%;
+}
+
+.popular-left,
+.popular-right {
+    width: 50%;
+}
+
+.popular-title {
+    padding-bottom: 3%;
+}
+
+.popular-title h1 {
+    font-size: 300%;
+}
+
+.popular-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.popular-content div {
+    padding-bottom: 3%;
+}
+
+.popular-content-info,
+.popular-content-list ul p,
+.popular-content-footer {
+    font-size: 120%;
+}
+
+.popular-content-list {
+    margin-left: 5%;
+}
+
+.popular-content-list ul li {
+    padding-bottom: 2%;
+}
+
+.popular-content-btn button {
+    padding: 1vw 2vw;
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 0.5vw;
+    transition: all 0.7s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.popular-content-btn button:hover {
+    color: white;
+}
+
+.popular-content-btn button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    padding-top: 65%;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    transform: translateY(4vw);
+    transition: all 0.7s ease-in-out;
+    z-index: -2;
+}
+
+.popular-content-btn button:hover::before{
+    transform: translateY(-3vw);
+    border-radius: 30%;
+}
+
+.popular-right {
+    padding-top: 1%;
+}
+
+.popular-img {
+    overflow: hidden;
+    border-radius: 1.5vw;
+    position: relative;
+}
+
+.popular-img:hover {
+    backdrop-filter: blur(1px);
+}
+
+.popular-img::before {
+    content: '<h1>hello</h1>';
+    color: white;
+    position: absolute;
+    top: 0;
+    right: -50%;
+    background-color: rgba(0, 0, 0, 0.74);
+    /* padding-top: 66.6%; */
+    width: 50%;
+    height: 99%;
+    border-radius: 1.5vw;
+    transition: all 0.7s ease-in-out;
+}
+
+.popular-img:hover::before {
+    right: 0%;
+}
+
+.popular-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5vw;
+    transition: all 0.7s ease-in-out;
+    position: relative;
+    z-index: -3;
+}
+
+.popular-img img:hover {
+    filter: blur(2px);
+}
