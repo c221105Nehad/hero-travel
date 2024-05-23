@@ -37,6 +37,13 @@ nav {
 
 .logo {
     width: 50%;
+    display: flex;
+    gap: 2%;
+}
+
+.logo img {
+    height: 7%;
+    width: 7%;
 }
 
 .logo h1 {
@@ -52,13 +59,13 @@ nav {
     width: 50%;
 }
 
-.navbar ul > li {
+.navbar ul>li {
     list-style: none;
     padding: 0.5% 0%;
     position: relative;
 }
 
-.navbar ul > li::before {
+.navbar ul>li::before {
     content: '';
     background-color: white;
     position: absolute;
@@ -70,11 +77,11 @@ nav {
     transition: all 0.7s ease-in-out;
 }
 
-.navbar ul > li:hover::before {
+.navbar ul>li:hover::before {
     width: 100%
 }
 
-.navbar ul > li a {
+.navbar ul>li a {
     text-decoration: none;
     color: white;
     margin-right: 10%;
@@ -95,7 +102,7 @@ nav {
     border-radius: 1.5vw;
     position: relative;
     background: linear-gradient(to bottom, black, black, transparent),
-    linear-gradient(to top, black, black, transparent);
+        linear-gradient(to top, black, black, transparent);
     z-index: 1;
 }
 
@@ -121,7 +128,7 @@ nav {
     position: relative;
 }
 
-.hero-title:before {
+/* .hero-title:before {
     content: '';
     width: 90%;
     height: 2%;
@@ -129,7 +136,7 @@ nav {
     bottom: 0;
     left: 5%;
     background-color: white;
-}
+} */
 
 .hero-title h1 {
     font-size: 400%;
@@ -148,7 +155,7 @@ nav {
     position: relative;
 }
 
-.hero-description div:before {
+/* .hero-description div:before {
     content: '';
     width: 100%;
     height: 2%;
@@ -156,7 +163,7 @@ nav {
     bottom: 0;
     left: 0;
     background-color: white;
-}
+} */
 
 .hero-description p {
     font-size: 120%;
@@ -242,7 +249,7 @@ nav {
     z-index: -2;
 }
 
-.popular-content-btn button:hover::before{
+.popular-content-btn button:hover::before {
     transform: translateY(-3vw);
     border-radius: 30%;
 }
@@ -290,4 +297,174 @@ nav {
 
 .popular-img img:hover {
     filter: blur(2px);
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+/* Image section */
+
+.image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    border-radius: 2vw;
+    margin-top: 2%;
+}
+
+.top-shadow,
+.bottom-shadow {
+    width: 100%;
+    height: 20%;
+}
+
+.top-shadow {
+    margin-bottom: 1%;
+    background: linear-gradient(to bottom, white, black, black);
+}
+
+.bottom-shadow {
+    background: linear-gradient(to bottom, black, white);
+}
+
+.bottom-shadow {
+    /* margin-top: 2%; */
+}
+
+.image div {
+    padding-bottom: 2%;
+}
+
+.image-title h1 {
+    font-size: 300%;
+}
+
+.image-description p {
+    font-size: 120%;
+}
+
+.travel3 {
+    grid-area: travel3;
+}
+
+.travel4 {
+    grid-area: travel4;
+
+}
+
+.travel5 {
+    grid-area: travel5;
+
+}
+
+.travel6 {
+    grid-area: travel6;
+}
+
+.travel7 {
+    grid-area: travel7;
+}
+
+.travel8 {
+    grid-area: travel8;
+}
+
+.travel9 {
+    grid-area: travel9;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-areas:
+        "travel3 travel3 travel3 travel3 travel4 travel4 travel4 travel4"
+        "travel5 travel5 travel5 travel6 travel6 travel6 travel7 travel7"
+        "travel8 travel8 travel8 travel9 travel9 travel9 travel9 travel9"
+    ;
+    gap: 0.5%;
+    width: 100%;
+    height: 100%;
+    padding: 0% 0.5%;
+    height: 120vh;
+}
+
+.image-gallery div {
+    margin: 0;
+    padding: 0;
+    border-radius: 2vw;
+    overflow: hidden;
+}
+
+.image-gallery div img {
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+/* Choose section */
+
+.choose {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+    margin: 5vh 0;
+}
+
+.choose-title h1 {
+    font-size: 300%;
+}
+
+.choose-description p {
+    font-size: 120%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.choose-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+}
+
+.choose-content-upper {
+    display: flex;
+    flex-direction: row;
+    gap: 5vh;
+}
+
+.choose-content-lower {
+    width: 100%;
+}
+
+.choose-content-lower > .choose-content-card {
+    width: calc(50% - 2.5vh);
+    margin: 0px auto;
+}
+
+.choose-content-card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 5vh;
+    padding: 7vh;
+    border-radius: 5vh;
+    box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.338);
+    width: 50%;
+}
+
+.choose-content-card div > h3 {
+    font-size: 200%;
+    font-weight: bolder;
+}
+
+.choose-content-card div > p {
+    font-size: 110%;
+    font-weight: 500;
 }
