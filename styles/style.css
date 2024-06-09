@@ -442,7 +442,7 @@ nav {
     width: 100%;
 }
 
-.choose-content-lower > .choose-content-card {
+.choose-content-lower>.choose-content-card {
     width: calc(50% - 2.5vh);
     margin: 0px auto;
 }
@@ -459,12 +459,122 @@ nav {
     width: 50%;
 }
 
-.choose-content-card div > h3 {
+.choose-content-card div>h3 {
     font-size: 200%;
     font-weight: bolder;
 }
 
-.choose-content-card div > p {
+.choose-content-card div>p {
     font-size: 110%;
     font-weight: 500;
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+/* Dealcount section */
+
+.dealcount {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+}
+
+.dealcouont-title h1 {
+    font-size: 300%;
+}
+
+.dealcount-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    font-size: 130%;
+}
+
+.dealcount-content {
+    width: 100%;
+}
+
+.dealcount-content-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding: 10vh;
+    position: relative;
+    margin-top: 3vh;
+}
+
+.dealcount-content-card:nth-child(2) {
+    justify-content: start;
+}
+
+.dealcount-content-card::before {
+    content: '';
+    background: url('/images/travel10.jpeg');
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    border-radius: 2vw;
+}
+
+.dealcount-content-card-content {
+    width: 50%;
+    border-radius: 2vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(1px);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    padding: 5vh;
+}
+
+.dealcount-content-card-content-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dealcount-content-card-content-info p {
+    font-size: 110%;
+}
+
+.dealcount-content-card-content-title h1 {
+    font-size: 200%;
+}
+
+.dealcount-content-card-content-description {
+    font-size: 110%;
+}
+
+.dealcount-content-card-content-price h3 {
+    font-size: 130%;
+}
+
+.dealcount-content-card-content-button button,
+.dealcount-button button{
+    padding: 2vh 3vh;
+    font-size: 110%;
+    background-color: white;
+    cursor: pointer;
+}
+
+.dealcount-button button {
+    background-color: black;
+    color: white;
+}
+
+.hello {
+    background-color: yellow;
+    background: url('/images/travel10.jpeg');
+    height: 100vh;
+    width: 100vw;
 }
