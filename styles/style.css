@@ -10,6 +10,15 @@ body {
 }
 
 /* --------------------------------------------------------------------------------- */
+/* Shared Styles */
+
+.btn-primary {
+    padding: 2vh 3vh;
+    font-size: 110%;
+    cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------------- */
 /* header */
 
 header {
@@ -561,10 +570,13 @@ nav {
 
 .dealcount-content-card-content-button button,
 .dealcount-button button{
-    padding: 2vh 3vh;
-    font-size: 110%;
+    /* padding: 2vh 3vh;
+    font-size: 110%; */
     background-color: white;
-    cursor: pointer;
+}
+
+.dealcount-button {
+    margin-bottom: 5vh;
 }
 
 .dealcount-button button {
@@ -572,9 +584,72 @@ nav {
     color: white;
 }
 
-.hello {
-    background-color: yellow;
-    background: url('/images/travel10.jpeg');
-    height: 100vh;
-    width: 100vw;
+/* ----------------------------------------------------------------------------------------------------------- */
+/* Video section */
+
+.video {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    width: 100%;
+    border-radius: 2vw;
+    background-color: black;
+    color: white;
+    padding: 5vw;
+}
+
+.video div {
+    width: 100%;
+}
+
+.video-left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5vh;
+}
+
+.video-left-title h1 {
+    font-size: 200%;
+    font-weight: 900;
+}
+
+.video-left-description {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.video-left-description p {
+    font-weight: 400;
+    font-size: 120%;
+}
+
+.video-left-description ul {
+    margin-left: 2vh;
+}
+
+.video-left-description ul p {
+    font-weight: 900;
+}
+
+.video-left-description ul li p:nth-child(1) {
+    padding-bottom: 5vh;
+}
+
+.video-left-button {
+    margin-top: -5vh;
+}
+
+.video-left-button button {
+    background-color: white;
+    color: black;
+}
+
+.video-right video {
+    object-fit: contain;
+    width: 100%;
+    border-radius: 2vw;
 }
