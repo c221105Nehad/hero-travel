@@ -13,8 +13,14 @@ body {
 /* Shared Styles */
 
 .btn-primary {
-    padding: 2vh 3vh;
-    font-size: 110%;
+    padding: 1vw 2vw;
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 0.5vw;
+    transition: all 0.7s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
     cursor: pointer;
 }
 
@@ -227,23 +233,19 @@ nav {
     padding-bottom: 2%;
 }
 
-.popular-content-btn button {
-    padding: 1vw 2vw;
-    border: 1px solid black;
-    background-color: transparent;
-    border-radius: 0.5vw;
-    transition: all 0.7s ease-in-out;
-    position: relative;
-    overflow: hidden;
-    z-index: 2;
-    cursor: pointer;
-}
-
-.popular-content-btn button:hover {
+.popular-content-btn button:hover,
+.form div button:hover,
+.dealcount-button button:hover,
+.video-left-button button:hover,
+.dealcount-content-card-content-button button:hover {
     color: white;
 }
 
-.popular-content-btn button::before {
+.popular-content-btn button::before,
+.form div button::before,
+.dealcount-button button::before,
+.video-left-button button::before,
+.dealcount-content-card-content-button button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -258,8 +260,12 @@ nav {
     z-index: -2;
 }
 
-.popular-content-btn button:hover::before {
-    transform: translateY(-3vw);
+.popular-content-btn button:hover::before,
+.form div button:hover::before,
+.dealcount-button button:hover::before,
+.video-left-button button:hover::before,
+.dealcount-content-card-content-button button:hover::before {
+    transform: translateY(-3.5vw);
     border-radius: 30%;
 }
 
@@ -335,10 +341,6 @@ nav {
 
 .bottom-shadow {
     background: linear-gradient(to bottom, black, white);
-}
-
-.bottom-shadow {
-    /* margin-top: 2%; */
 }
 
 .image div {
@@ -568,10 +570,16 @@ nav {
     font-size: 130%;
 }
 
-.dealcount-content-card-content-button button,
-.dealcount-button button{
-    /* padding: 2vh 3vh;
-    font-size: 110%; */
+.dealcount-content-card-content-button button {
+    color: white;
+    border: 0.5px solid white;
+}
+
+.dealcount-content-card-content-button button:hover {
+    color: black;
+}
+
+.dealcount-content-card-content-button button:before {
     background-color: white;
 }
 
@@ -582,6 +590,14 @@ nav {
 .dealcount-button button {
     background-color: black;
     color: white;
+}
+
+.dealcount-button button:hover {
+    color: black;
+}
+
+.dealcount-button button::before {
+    background-color: white;
 }
 
 /* ----------------------------------------------------------------------------------------------------------- */
@@ -612,7 +628,7 @@ nav {
 }
 
 .video-left-title h1 {
-    font-size: 200%;
+    font-size: 300%;
     font-weight: 900;
 }
 
@@ -624,7 +640,7 @@ nav {
 
 .video-left-description p {
     font-weight: 400;
-    font-size: 120%;
+    font-size: 130%;
 }
 
 .video-left-description ul {
@@ -648,8 +664,215 @@ nav {
     color: black;
 }
 
+.video-left-button button:hover {
+    border: 0.5px solid white;
+}
+
 .video-right video {
     object-fit: contain;
     width: 100%;
     border-radius: 2vw;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* Newsletter Section */
+
+.newsletter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10vh;
+    width: 100%;
+    margin: 5vh 0;
+
+}
+
+.newsletter>div {
+    width: 100%;
+}
+
+.newsletter-left {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    border: 2px solid black;
+    border-radius: 5vh;
+    padding: 5vh;
+}
+
+.newsletter-title h1 {
+    font-size: 300%;
+}
+
+.newsletter-info p {
+    font-size: 120%;
+}
+
+.line {
+    width: 100%;
+    height: 0.2vh;
+    background-color: rgba(0, 0, 0, 0.502);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 5vh;
+}
+
+.form input {
+    padding: 2vh;
+    border-radius: 2vh;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: aliceblue;
+}
+
+.form div button {
+
+}
+
+.newsletter-right {
+    height: 65vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    border-radius: 5vh;
+    overflow: hidden;
+}
+
+.newsletter-right>div {
+    /* border: 2px solid black; */
+    height: 55%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 0 1vh;
+}
+
+.rectangle {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.507);
+    border-radius: 2vh;
+    padding: 2vh;
+    width: 50%;
+    text-align: center;
+    rotate: 30deg;
+}
+
+.rectangle div p {
+    font-size: 200%;
+}
+
+.rectangle div h3 {
+    font-size: 250%;
+}
+
+.newsletter-right::before {
+    content: '';
+    background: url('/images/travel10.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* Footer */
+
+.footer {
+    width: 100%;
+    border: 2px solid yellowgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+    border-top-left-radius: 5vh;
+    border-top-right-radius: 5vh;
+    background-color: black;
+    color: white;
+    padding: 5vh;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+}
+
+.footer-logo img {
+    width: 20%;
+}
+
+.footer-logo h1 {
+    font-size: 300%;
+}
+
+.footer-quote p {
+    font-size: 120%;
+}
+
+.footer-policy p,
+.footer-condition p {
+    font-size: 110%;
+}
+
+.footer-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15vh;
+}
+
+.footer-icons div {
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 0.5vh;
+    cursor: pointer;
+}
+
+.footer-icons div i {
+    font-size: 150%;
+}
+
+.footer-icons div:nth-child(1):hover {
+    background-color: #1DA1F2;
+}
+
+.footer-icons div:nth-child(2):hover {
+    background-color: #316FF6;
+}
+
+.footer-icons div:nth-child(3):hover {
+    background: linear-gradient(to top, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+.footer-icons div:nth-child(4):hover {
+    background-color: white;
+    color: #000;
+}
+
+.footer-line {
+    width: 70%;
+    background-color: white;
+    height: 0.2vh;
+    opacity: 0.4;
+    border-radius: 50%;
 }
